@@ -4,7 +4,7 @@
         "name": "Comprar Pão",
         "description": "Passar na padaria e comprar pão fresco",
         "category": 4,
-        "image": "cart.fill")
+        "image": "cart.fill"
     },
     {
         "id": 2,
@@ -24,7 +24,14 @@
         "id": 4,
         "name": "Marcar Restaurante",
         "description": "Fazer reserva para o jantar de desepdida.",
-        "category": 4,
+        "category": 1,
         "image": "star.fill"
+    },
+    {
+        "id": 5,
+        "name": "Ir à consulta",
+        "description": "Ir à consulta de rotina no Hospital de São João.",
+        "category": 5,
+        "image": "heart.fill"
     }
 ]

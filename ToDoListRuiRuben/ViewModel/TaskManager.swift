@@ -71,7 +71,7 @@ class TaskManager: ObservableObject {
         tasks.removeAll()
     }
     
-    // Criar tarefas de exemplo para a primeira execução
+    // Criar tarefas de exemplo para a primeira execução caso haja erro no JSON
     private func createSampleTasks() {
         tasks = [
             Task(id: 1, name: "Comprar Pão", description: "Passar na padaria e comprar pão fresco", category: 4, image: "cart.fill"),
