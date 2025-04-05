@@ -57,8 +57,10 @@ struct TaskImages {
         "calendar",
         "doc.fill",
         "folder.fill",
-        "paperplane.fill",
+        "cart.fill",
         "tray.fill",
-        "pencil"
+        "pencil",
+        "heart.fill",
+        "book.fill"
     ]
 }

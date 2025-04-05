@@ -25,7 +25,7 @@ struct TaskFormView: View {
     @State private var selectedCategory = 1
     @State private var selectedImage = "checkmark.circle"
     
-    // Grid layout para selection de imagens
+    // Grid layout para seleção de imagens
     private let columns = [
         GridItem(.adaptive(minimum: 60))
     ]
@@ -33,7 +33,7 @@ struct TaskFormView: View {
     var body: some View {
         Form {
             Section(header: Text("Informações da Tarefa")) {
-                TextField("Nome", text: $taskName)
+                TextField("Tarefa", text: $taskName)
                 
                 VStack(alignment: .leading) {
                     Text("Descrição")

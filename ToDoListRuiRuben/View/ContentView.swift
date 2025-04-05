@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background com camadas (ZStack)
+                // Background com gradiente insipirado nas cores do CESAE Digital
                 LinearGradient(gradient:
                                Gradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.3)]),
                                startPoint: .topLeading,
@@ -29,9 +29,10 @@ struct ContentView: View {
                         ContentUnavailableView {
                             Label("Nenhuma Tarefa", systemImage: "list.bullet.rectangle.portrait")
                         } description: {
-                            Text("Adicione tarefas tocando no botão +")
+                            Text("Toque no botão + para adicionar tarefas")
                         }
                     } else {
+                        // Spacer()
                         List {
                             ForEach(taskManager.tasks) { task in
                                 NavigationLink(destination: TaskDetailView(taskId: task.id)) {

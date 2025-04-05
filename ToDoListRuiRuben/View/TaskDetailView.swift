@@ -16,18 +16,18 @@ struct TaskDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showDeleteConfirmation = false
     
-    // Computar a tarefa atual com base no ID
+    // Verificar a tarefa atual com base no ID
     private var task: Task {
         if let task = taskManager.tasks.first(where: { $0.id == taskId }) {
             return task
         }
-        // Fallback para evitar crash (não deveria acontecer normalmente)
+        // Fallback para evitar crash da aplicação
         return Task(id: -1, name: "Tarefa não encontrada", description: "", category: 1, image: "exclamationmark.triangle")
     }
     
     var body: some View {
         ZStack {
-            // Background com gradiente
+            // Background com gradiente insipirado nas cores do CESAE Digital
             LinearGradient(gradient:
                            Gradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.2)]),
                            startPoint: .topLeading,
@@ -122,11 +122,11 @@ struct TaskDetailView: View {
                 dismiss()
             }
         } message: {
-            Text("Tem certeza que deseja eliminar esta tarefa?")
+            Text("Tem a certeza que deseja eliminar esta tarefa?")
         }
     }
     
-    // Funções auxiliares para obter informações sobre categorias
+    // Funções auxiliares para obter informações sobre as categorias
     func getCategoryName(for categoryId: Int) -> String {
         if let category = TaskCategory(rawValue: categoryId) {
             return category.name
